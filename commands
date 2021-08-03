@@ -1,0 +1,29 @@
+sudo apt update
+sudo apt install python3-pip
+sudo apt-get install gunicorn
+cd /etc/nginx/sites-enabled/
+
+sudo vi fastapi
+    server{
+        listen 80;
+        server_name 34.235.133.73;
+        location / {
+                        proxy_pass http://127.0.0.1:8000;
+                }
+        }
+
+sudo service nginx restart
+cd ~
+sudo pip3 install pipenv
+cd project
+pipenv --python /usr/bin/python3
+pipenv shell
+pipenv install -r requirements.txt
+gunicorn -w 1 -k uvicorn.workers.UvicornWorker app:app
+
+
+
+
+
+
+sudo snap install docker

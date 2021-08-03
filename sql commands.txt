@@ -1,0 +1,24 @@
+create database awsProject;
+
+
+ use awsProject;
+
+create table Students2021(studentID INT AUTO_INCREMENT, 
+			  studentName VARCHAR(50) NOT NULL, 
+			  date_Of_Joining DATE NOT NULL, 
+			  email VARCHAR(50), 
+			  PhoneNumber VARCHAR(10), 
+			  FEE_STATUS ENUM('PAID','UNPAID') DEFAULT 'UNPAID', 
+			  PRIMARY KEY (studentID));
+
+
+insert into Students2021 values(1,'dummy student','1999-09-19','dummy email','9999988888','UNPAID');
+
+
+
+
+connection = mysql.connector.connect(host='localhost',
+                                         database='awsproject',
+                                         user='root',
+                                         password='password')
+
