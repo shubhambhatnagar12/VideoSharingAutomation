@@ -12,7 +12,7 @@ COPY DBconnection.py .
 COPY app.py .
 COPY pydantic_model.py .
 COPY S3creds.py .
-ENV aws_access_key_id=AKIA6EGID2AGDMW2IKNU
-ENV aws_secret_access_key=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
+ENV aws_access_key_id=iam user access key
+ENV aws_secret_access_key=secretkey
 ENV password=password
 CMD [ "uvicorn","app:app","--host","0.0.0.0" ]
