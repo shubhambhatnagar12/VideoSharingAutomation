@@ -8,5 +8,3 @@ client = boto3.client(
 )
 
 
-#'AKIA6EGID2AGDMW2IKNU'
-#'/vWrXXVa1bej85bEWlbZfJyxArWxMc/4cZXmlOC1',
